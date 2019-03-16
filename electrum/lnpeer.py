@@ -79,7 +79,7 @@ class Peer(PrintError):
         self.localfeatures = LnLocalFeatures(0)
         if request_initial_sync:
             self.localfeatures |= LnLocalFeatures.INITIAL_ROUTING_SYNC
-        self.localfeatures |= LnLocalFeatures.OPTION_DATA_LOSS_PROTECT_REQ
+        #self.localfeatures |= LnLocalFeatures.OPTION_DATA_LOSS_PROTECT_REQ
         self.attempted_route = {}
         self.orphan_channel_updates = OrderedDict()
         self.sent_commitment_for_ctn_last = defaultdict(lambda: None)  # type: Dict[Channel, Optional[int]]
